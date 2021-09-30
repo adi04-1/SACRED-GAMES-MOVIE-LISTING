@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Montserrat|Nunito+Sans:400,700");
+@import url("netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("IMAGES/background.jpg");
+  background-size: auto;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  display:block;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  align-items: center;
+  width: 69%;
+  height: 75%;
+  box-shadow: 2px 5px 15px 1px transparent;
+}
+@media only screen and (min-width: 320px) {
+  .card-container {
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .card-container {
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+.poster-container1 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    box-shadow:  transparent;
+    opacity: 0;
+    flex-direction: row;
+   background-color: black;
+  }
+.poster-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  box-shadow:  transparent;
+  color:white;
+  flex-direction: row;
+ background-color: black;
+ padding: 3em;
+ font-family: "Nunito Sans", sans-serif;
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    height:20vh;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.cast-pic img{
+    height:30vh;
+    width:20vw;
+    align-items: center;
+    padding:5px;
+}
+
+.cast-details {
+    justify-content: center;
+    align-items: center;
+}
+#poster {
+  -webkit-filter: contrast(120%);
+  transform: scale(1.5);
+  transform-origin: 70% 19%;
+  width: 100%;
+  height: 100%;
+  background-image: url("IMAGES/poster.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  box-shadow: transparent;
+}
+
+.card-description {
+  letter-spacing: 0.3em;
+  background: #000;
+  padding: 3em;
+  line-height: 2em;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.card-description h2{
+    color:red;
+    font-weight: bolder;
+    
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+
+}
+.card-description .logo-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.card-description .logo-container .logo {
+  transform: scale(1.2);
+  width: 35%;
+  height: 100%;
+  background-image: url("IMAGES/background.jpg");
+  background-size: cover;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+}
+.card-description p,
+.card-description .rating,
+.card-description .buttons {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.card-description p {
+  font-size: 0.85em;
+  letter-spacing: 2px;
+}
+.card-description .rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-description .span {
+  color: #ec2416;
+  font-weight: 700;
+}
+.card-description label {
+  font-family: FontAwesome;
+  font-size: 1.4em;
+  color: #ffd700;
+}
+.card-description label:before {
+  content: "";
+}
+.card-description .buttons {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  justify-content:space-evenly;
+}
+.card-description .buttons .button {
+  transition: 0.4s;
+  cursor: pointer;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
+  padding: 1.6em;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: initial;
+  border: 2px solid white;
+  color: white;
+  border-radius: 11px;
+  height: 40px;
+  width:30px;
+}
+.card-description .buttons .play {
+  border: none;
+  background: #ec2416;
+  width: 20%;
+  justify-content: center;
+  padding:15px;
+}
+.card-description .buttons .play:after {
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  font-weight: lighter;
+  content: "";
+}
+
+.card-description .buttons .play:hover{
+    background: white;
+    color:#ec2416;
+}
+.card-description .buttons .add {
+  width: 35%;
+  justify-content: center;
+  padding:15px;
+}
+.card-description .buttons .add:hover {
+  border: 2px solid #ec2416;
+  color: #ec2416;
+}
+.card-description .buttons .add:before {
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  font-weight: lighter;
+  content: "";
+}
+
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+footer{
+    background-color: red;
+    color:black;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+  }
+  
+  .middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+  /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+  @media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    }
+    /* Hide the right column on small screens */
+    .right {
+      display: none;
+    }
+  }
